@@ -5,6 +5,8 @@
     </header>
     <Main
       v-bind:writeNum = 'writeNum'
+      v-on:plus="plus1"
+      v-on:minus="minus1"
     />
   <footer>
     <h3>VueJS</h3>
@@ -19,6 +21,14 @@ export default {
   data () {
     return {
       writeNum: 0 // Initial Value
+    }
+  },
+  methods: {
+    plus1 () {
+      this.writeNum++
+    },
+    minus1 () {
+      this.writeNum--
     }
   },
   components: {

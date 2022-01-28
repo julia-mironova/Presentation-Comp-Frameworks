@@ -2,8 +2,8 @@
   <main>
     <h2 id = 'unswer'>{{writeNum}}</h2>
     <div class='counter'>
-      <button class="plus">+</button>
-      <button class="minus">-</button>
+      <button class="plus" v-on:click="$emit('plus', writeNum)">+</button>
+      <button class="minus" v-on:click="$emit('minus', writeNum)">-</button>
     </div>
   </main>
 </template>
