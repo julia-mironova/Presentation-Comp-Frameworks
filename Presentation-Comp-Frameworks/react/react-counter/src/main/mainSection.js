@@ -31,7 +31,7 @@ const styles = {
   }  
 }
 
-export default function MainSection (props) {
+ function MainSection (props) {
   
   return (
     <main style={styles.main}>
@@ -43,3 +43,6 @@ export default function MainSection (props) {
       </main>
   )
 }
+
+
+export default MainSection
