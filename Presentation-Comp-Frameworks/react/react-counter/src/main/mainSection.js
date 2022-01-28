@@ -31,10 +31,11 @@ const styles = {
   }  
 }
 
-export default function MainSection () {
+export default function MainSection (props) {
+  
   return (
     <main style={styles.main}>
-        <h2 style={styles.h2} id="unswer">0</h2>
+        <h2 style={styles.h2} id="unswer">{props.num}</h2>
         <div style={styles.counter} className="counter">
           <button className="plus" style={styles.plus}>+</button>
           <button className="minus" style={styles.minus}>-</button>
