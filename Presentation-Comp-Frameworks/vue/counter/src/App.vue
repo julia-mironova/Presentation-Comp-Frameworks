@@ -55,6 +55,6 @@ header {
 footer {
   background-color: rgb(79, 155, 123);
   font-size: 1.2rem;
-  padding: 0 40%;
+  padding: 0 45%;
 }
 </style>
