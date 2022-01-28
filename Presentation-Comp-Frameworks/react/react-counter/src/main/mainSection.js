@@ -32,17 +32,15 @@ const styles = {
 }
 
  function MainSection (props) {
-  
   return (
     <main style={styles.main}>
         <h2 style={styles.h2} id="unswer">{props.num}</h2>
         <div style={styles.counter} className="counter">
-          <button className="plus" style={styles.plus}>+</button>
-          <button className="minus" style={styles.minus}>-</button>
+          <button className="plus" style={styles.plus} onClick={props.plusClick}>+</button>
+          <button className="minus" style={styles.minus} onClick={props.minusClick}>-</button>
         </div>
       </main>
   )
 }
-
 
 export default MainSection
