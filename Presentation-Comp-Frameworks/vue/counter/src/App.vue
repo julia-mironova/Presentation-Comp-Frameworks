@@ -1,15 +1,11 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <header>
-    <h1>Counter</h1>
-  </header>
-  <main>
-    <h2 id = "unswer">0</h2>
-    <div class="counter">
-      <button class="plus">+</button>
-      <button class="minus">-</button>
-    </div>
-  </main>
+      <h1>Counter</h1>
+    </header>
+    <Main
+      v-bind:writeNum = 'writeNum'
+    />
   <footer>
     <h3>VueJS</h3>
   </footer>
@@ -17,21 +13,38 @@
 </template>
 
 <script>
-
+import Main from '@/components/main.vue'
 export default {
   name: 'App',
+  data () {
+    return {
+      writeNum: 0 // Initial Value
+    }
+  },
   components: {
+    Main
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  margin: 15% 25%;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(115, 115, 161);
+  font-size: 2rem;
+  padding: 0 35%;
+}
+
+footer {
+  background-color: rgb(79, 155, 123);
+  font-size: 1.2rem;
+  padding: 0 40%;
 }
 </style>
