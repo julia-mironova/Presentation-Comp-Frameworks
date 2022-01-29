@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  writeNum: number = 0;
+  plusBtn() {
+    this.writeNum++;
+  }
+  minusBtn() {
+    this.writeNum--;
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
