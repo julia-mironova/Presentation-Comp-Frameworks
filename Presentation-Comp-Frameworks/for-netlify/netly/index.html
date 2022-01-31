@@ -214,11 +214,8 @@
 
 				<section data-auto-animate>
 					<h2 data-id="code-title">Angular</h2>
-					<p>Anugal is based on TypeScript, and you have to know how to write the typisation of data
-						 before starting work on it. For each component you need to create a folder with html,
-						 scss(sass), ts and even testing(which you can delete if you don’t need).
-						  Angular CLI is dynamic for Dom and applications could be rendered outside the browser.
-							 RxJS is a library commonly used with Angular to handle asynchronous data calls.
+					<p>Based on TypeScript, Angular CLI is dynamic for Dom and applications could be rendered outside the browser.
+							RxJS is a library for asynchronous data calls.
 					</p>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 						Everythin in Angulare cames to app-root:
@@ -239,12 +236,12 @@
 						</main>
 					</code></pre>
 					<p>Dependency injection made components more reusable, easier to manage and test,
-						components having their hierarchy. Components from their dependencies can run them parallel to each other. 
+						components having their hierarchy. Has html, scss, ts and test parts. 
 					</p>
 				</section>
 
 				<section>
-					<p>Each component has own style (I choose scss), ts file with class and methods:</p>
+					<p>Build on classes and methods:</p>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 						import { Component, Input, OnInit } from '@angular/core';
 
@@ -269,15 +266,13 @@
 					<h2>My point of view about Angular</h2>
 					<p>
 						<strong style="color: green;">Pluses:</strong><br>
-						This is the framework of classes where you export classes with methods.
-						Classes don’t have dependencies in themselves but consume them from the external source.
-						Then you create a component all dependencies inside it written automatically.
-						Syntaksis is very easy: for data you choose [data], for listeners (click) = 'plusBtn();'  squares.<br>
+						+ This is the framework of classes where you export classes with methods.<br>
+						+	Then you create a component all dependencies inside it written automatically.<br>
+						+ Readeble syntaksis: for data you choose [data], for listeners (click) = 'plusBtn();' <br>
 						<strong style="color:red;">Minuses:</strong><br>
-						If you onboard new developers familiar with JavaScript to learn and use new Angular,
-						they will be challenged compared to similar React or Vue onboarding. The array of topics and aspects
-						to be covered is large: modules, dependency injection that we mentioned before, components, services,
-						templates, etc. 
+						- You have to learn TS<br>
+						- You need to understend work with more documentation<br>
+						- Slow (to compare with React) <br>
 					</p>
 					<p>But if you need a good easy architecture project for a long term you have to do it on Angular.</p>
 				</section>
