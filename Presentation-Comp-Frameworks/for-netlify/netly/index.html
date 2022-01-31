@@ -39,37 +39,44 @@
 				</section>
 
 				<section>
-					<p>
-						Tools like frameworks have to make life easier by providing the basis for smoother development, if you already understand the simple logic of JavaScript .
-					</p>
-					<p>On this week I made simple counter on 4 different ways:</p>
+					<h2>Who makes them?</h2>
+					<p style="color: greenyellow;">Vue.js <small>was created by Evan You, and is maintained by him and the rest of the active core team members</small></p>
+					<p style="color: aquamarine;">React <small>maintained by Meta (formerly Facebook) and a community of individual developers and companies</small></p> 
+					<p style="color: cadetblue;">Angular <small>led by the Angular Team at Google and by a community of individuals and corporations</small></p>
+				</section>
+
+				<section>
+					<h2>How many users?</h2>
+					<p>Most used web frameworks among developers worldwide, as of 2021 (React on the first position)</p>
+					<img src="./screens-to-pres/users.jpg" alt="counter" style="height: 320px; margin: 0 auto 2rem auto; background: transparent;" class="demo-logo">
+				</section>
+
+				<section>
+					<h6>On this week I made simple counter</h6>
+					<h6 style="color: green;"> on 4 different ways:</h6>
 					 <a href="https://counter-css-js-html-mironova.netlify.app/">simple JS+CSS+HTML</a><br/>
 					 <a href="https://counter-vue-mironova.netlify.app/">Vue.js</a><br/>
 					 <a href="https://counter-react-mironova.netlify.app/">React</a><br/>
 					 <a href="https://counter-angular-mironova.netlify.app/">Angular</a><br/>
+					 <small style="font-style: italic;">(blue one are links)</small>
 				</section>
 
 				<section>
 					<p>
-						After learning in RS school for half a year I made it the first way for 15 mins.<br/>
-						But the main aim was to understand frameworks, and how to start working on them if you are a beginner.<br/> 
 						To install all of them you need to write in node.js relevan command:</p>
 						<li style="color: green;">$ npm install vue</li>
 						<li style="color: green;">If you have npx module it enough (npx create-react-app my-app)</li>
 						<li style="color: green;">npm install -g @angular/cli</li>
 					<p>
-						To see an application on any Frameworks you have to build it, they have a localhosts and you can see the result in the run time. All of them build on components type, you put all parts to one finish file and frame build the results and change it. Three of them have a folder “src” and build output from it (in my opinion Angular is the slowest one).
+						All of them build on components principle, have a folder “src”.
 					</p>
 				</section>
 
 				<section data-auto-animate>
 					<h2 data-id="code-title">Vue.js</h2>
-					<p>The simple application through Babel and it is on js (without tipization).<br>
-						You have got a finish template app.vue there you put all components.<br>
-						It's not difficult for new people who never work with libraries and wrames.<br>
-						Remember that you have data and methods in common app.vue and then export that you need
-						in independent components. After putting a component to the app you have to write the methods
-						and data and interaction in the component thro v-...: sintaksis. 
+					<p>
+						You have data and methods in common app.vue and then export that you need
+						in independent components. 
 					</p>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 						div id='app'
@@ -86,7 +93,6 @@
 				<section data-auto-animate>
 					<h2 data-id="code-title">Vue.js component</h2>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						code on js of main section component
 						<template>
 							<main>
 								<h2 id = 'unswer'>{{writeNum}}</h2>
@@ -113,10 +119,8 @@
 						}
 						</style>
 					</code></pre>
-					<p>Vue changes a DOM, so you don’t have to touch the DOM yourself.<br>
-						Each component have template, script, style in one place: …vue<br>
-						For small projects it is a simple way to change parts or push a new one logic component.<br>
-						You can divide project for a few people, make independent parts and then make one app.<br>
+					<p>Vue changes a DOM.
+						Each component have template, script, style in one place: …vue		
 					</p>
 				</section>
 
@@ -124,24 +128,21 @@
 					<h2>My point of view about Vue.js</h2>
 					<p>
 						<strong style="color: green;">Pluses:</strong><br>
-						Vue.js utilizes virtual DOM: as a copy of an original DOM that figures
-						out what elements to update, without rerendering the whole DOM. 
-						This operation is  very fast, it’s easier to update related components and track data the updates, 
-						and when you read common vue you already understand that and how it has to change even without opening them.<br>
+						+ For small projects fast and easy<br>
+						+ Without rerendering the whole DOM<br>
+						+ Very fast to update related components and track data the updates<br> 
+						+ When you read common vue you already understand how it has to work<br>
 						<strong style="color:red;">Minuses:</strong><br>
-						Each component has its watcher that rerenders the data each time a user triggers the component. 
-						The reactivity system rerenders only those chunks of data that were triggered and can make mistakes 
-						during data reading. It is flexible, and also can render the mistakes in putting data.
+						- Small support<br>
+						- Each component has its watcher (can be mistakes in rendering)<br>
+						- Difficult for big projects
 					</p>
 				</section>
 
 				<section data-auto-animate>
 					<h2 data-id="code-title">React</h2>
-					<p>In my opinion you have to read more documentation before starting work.
-						You can choose the way of Dom build: classes or functions (or bought).
-						The main trouble for me was to understand that you have to change the Dom buy useState(startparam) principle,
-						 there you have a parameter and function to change it. 
-						 A virtual DOM only re-renders the actual components that were manipulated.
+					<p>The main trouble for me was to understand that you have to change the Dom buy useState(startparam) principle,
+						 there you have a parameter and function
 					</p>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 						function App() {
@@ -172,7 +173,6 @@
 				<section data-auto-animate>
 					<h2 data-id="code-title">React component</h2>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						To create you can use class or function, after put this part in app.
 						function MainSection (props) {
 							return (
 								<main style= {styles.main}>
@@ -190,8 +190,7 @@
 						}
 						export default MainSection
 					</code></pre>
-					<p>All parameters there are props, and sintakses different to compare with JS.<br>
-						Anyway, I hope after some time it will be normal to read and understand.<br>
+					<p>
 						<li style="color: green; font-size: 22px;">button className="minus" style={styles.minus} onClick={props.minusClick}</li>
 					</p>
 				</section>
@@ -200,22 +199,16 @@
 					<h2>My point of view about React</h2>
 					<p style="font-size: 22px;">
 						<strong style="color: green;">Pluses:</strong><br>
-						JSX syntax extension that can be used to write HTML or XML-like text code alongside ReactJS.
-						This additional text can co-exist within the ReactJS code and can be processed correctly by the React
-						framework. In app.js you return the Dom with a render section with description how the parameters 
-						work and their chins. I see that they find each other like objects with keys and properties. 
-						Even styles you have to describe in this way. On app.js you see all dependencies and it is also nice …
-						Each ReactJS component has its own controls and logic that are specific to the component. 
-						Components can be reused.<br>
+						+ Virtual DOM only re-renders the actual components that were manipulated<br>
+						+ JSX syntax can co-exist within the ReactJS code and processed correctly <br>
+						+ Parameters find each other like objects with keys and properties <br>
+						+ Each ReactJS component has its own controls and logic <br>
+						+ Components can be reused<br>
+						+ Parent data cannot be affected by changes in child elements<br>
 						<strong style="color:red;">Minuses:</strong><br>
-						If you are not good in typical objects' usability it can be a big barrier for understanding this process.
-						All parameters there are props, and sintakses different to compare with JS. Anyway, I hope after some 
-						time it will be normal to read and understand.
-						You have to go into app.js, find this minusClick after finding its function and after 
-						changing it because React has One-Way Data Flow. All data to downward motion. In this structure, parent 
-						data cannot be affected by changes in child elements. 
-						Also in React style you can not use pseudo-classes like :hover, so 2 ways to write them: function or index.css 
-						(I choose the second one and unfortunately have styles for this section in 2 different parts of folder)
+						- Еhe syntax is different to compare with JS.<br>
+						- Has One-Way Data Flow<br>  
+						- You can not use pseudo-classes (:hover...) 
 					</p>
 				</section>
 
