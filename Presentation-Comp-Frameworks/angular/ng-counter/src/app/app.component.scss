@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+  margin: 15% 25%;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(115, 115, 161);
+  padding: 0 35%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 8rem;
+}
+
+footer {
+  background-color: rgb(79, 155, 123);
+  padding: 0 43%;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}

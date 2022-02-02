@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mironava Presentation: Vue.js React Angular</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Mironava">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="icon" type="image" href="presentation.svg">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<a href="https://counter-css-js-html-mironova.netlify.app/">
+						<img src="/reveal/pres-example/reveal.js/screens-to-pres/counter.jpg" alt="counter" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h3><small>The Frameworks:</small></h3> 
+					<h3> Vue.js</h3>
+					<h3> React </h3>
+					<h3> Angular</h3> 
+					<p>
+						<small>Created by <a href="https://github.com/julia-mironova/Presentation-Comp-Frameworks">Julia Mironava</a> </small>
+					</p>
+				</section>
+
+				<section>
+					<p>
+						Tools like frameworks have to make life easier by providing the basis for smoother development, if you already understand the simple logic of JavaScript .
+					</p>
+					<p>On this week I made simple counter on 4 different ways:</p>
+					 <a href="https://counter-css-js-html-mironova.netlify.app/">simple JS+CSS+HTML</a><br/>
+					 <a href="https://counter-vue-mironova.netlify.app/">Vue.js</a><br/>
+					 <a href="https://counter-react-mironova.netlify.app/">React</a><br/>
+					 <a href="https://counter-angular-mironova.netlify.app/">Angular</a><br/>
+				</section>
+
+				<section>
+					<p>
+						After learning in RS school for half a year I made it the first way for 15 mins.<br/>
+						But the main aim was to understand frameworks, and how to start working on them if you are a beginner.<br/> 
+						To install all of them you need to write in node.js relevan command:</p>
+						<li style="color: green;">$ npm install vue</li>
+						<li style="color: green;">If you have npx module it enough (npx create-react-app my-app)</li>
+						<li style="color: green;">npm install -g @angular/cli</li>
+					<p>
+						To see an application on any Frameworks you have to build it, they have a localhosts and you can see the result in the run time. All of them build on components type, you put all parts to one finish file and frame build the results and change it. Three of them have a folder “src” and build output from it (in my opinion Angular is the slowest one).
+					</p>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Vue.js</h2>
+					<p>The simple application through Babel and it is on js (without tipization).<br>
+						You have got a finish template app.vue there you put all components.<br>
+						It's not difficult for new people who never work with libraries and wrames.<br>
+						Remember that you have data and methods in common app.vue and then export that you need
+						in independent components. After putting a component to the app you have to write the methods
+						and data and interaction in the component thro v-...: sintaksis. 
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						div id='app'
+							header...
+								Main
+									v-bind:writeNum = 'writeNum'
+									v-on:plus="plus1"
+									v-on:minus="minus1"
+								/>
+							footer...
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Vue.js component</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						code on js of main section component
+						<template>
+							<main>
+								<h2 id = 'unswer'>{{writeNum}}</h2>
+								<div class='counter'>
+									<button class="plus" v-on:click="$emit('plus', writeNum)">
+										+
+									</button>
+									<button class="minus" v-on:click="$emit('minus', writeNum)">
+										-
+									</button>
+								</div>
+							</main>
+						</template>
+
+						<script>
+							export default {
+							props: ['writeNum']
+							}
+						</script>
+						
+						<style>
+						main {
+							background-color: rgb(101, 172, 182);
+						}
+						</style>
+					</code></pre>
+					<p>Vue changes a DOM, so you don’t have to touch the DOM yourself.<br>
+						Each component have template, script, style in one place: …vue<br>
+						For small projects it is a simple way to change parts or push a new one logic component.<br>
+						You can divide project for a few people, make independent parts and then make one app.<br>
+					</p>
+				</section>
+
+				<section>
+					<h2>My point of view about Vue.js</h2>
+					<p>
+						<strong style="color: green;">Pluses:</strong><br>
+						Vue.js utilizes virtual DOM: as a copy of an original DOM that figures
+						out what elements to update, without rerendering the whole DOM. 
+						This operation is  very fast, it’s easier to update related components and track data the updates, 
+						and when you read common vue you already understand that and how it has to change even without opening them.<br>
+						<strong style="color:red;">Minuses:</strong><br>
+						Each component has its watcher that rerenders the data each time a user triggers the component. 
+						The reactivity system rerenders only those chunks of data that were triggered and can make mistakes 
+						during data reading. It is flexible, and also can render the mistakes in putting data.
+					</p>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">React</h2>
+					<p>In my opinion you have to read more documentation before starting work.
+						You can choose the way of Dom build: classes or functions (or bought).
+						The main trouble for me was to understand that you have to change the Dom buy useState(startparam) principle,
+						 there you have a parameter and function to change it. 
+						 A virtual DOM only re-renders the actual components that were manipulated.
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						function App() {
+							let [writeNum, setNum] = useState(0);
+
+							function plusBtn() {
+								setNum(writeNum+=1);
+							}
+
+							function minusBtn() {
+								setNum(writeNum-=1);
+							}
+
+							return (
+								<header>
+									<h1>Counter</h1>
+								</header>
+								MainSection num = {writeNum} 
+									plusClick = {plusBtn} minusClick = {minusBtn}/>
+								<footer>
+										<h3>React</h3>
+								</footer>
+							)
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">React component</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						To create you can use class or function, after put this part in app.
+						function MainSection (props) {
+							return (
+								<main style= {styles.main}>
+										<h2 style={styles.h2} id="unswer">{props.num}</h2>
+										<div style={styles.counter} className="counter">
+											<button className="plus" style={styles.plus} onClick={props.plusClick}>
+												+
+											</button>
+											<button className="minus" style={styles.minus} onClick={props.minusClick}>
+												-
+											</button>
+										</div>
+								</main>
+							)
+						}
+						export default MainSection
+					</code></pre>
+					<p>All parameters there are props, and sintakses different to compare with JS.<br>
+						Anyway, I hope after some time it will be normal to read and understand.<br>
+						<li style="color: green; font-size: 22px;">button className="minus" style={styles.minus} onClick={props.minusClick}</li>
+					</p>
+				</section>
+
+				<section>
+					<h2>My point of view about React</h2>
+					<p style="font-size: 22px;">
+						<strong style="color: green;">Pluses:</strong><br>
+						JSX syntax extension that can be used to write HTML or XML-like text code alongside ReactJS.
+						This additional text can co-exist within the ReactJS code and can be processed correctly by the React
+						framework. In app.js you return the Dom with a render section with description how the parameters 
+						work and their chins. I see that they find each other like objects with keys and properties. 
+						Even styles you have to describe in this way. On app.js you see all dependencies and it is also nice …
+						Each ReactJS component has its own controls and logic that are specific to the component. 
+						Components can be reused.<br>
+						<strong style="color:red;">Minuses:</strong><br>
+						If you are not good in typical objects' usability it can be a big barrier for understanding this process.
+						All parameters there are props, and sintakses different to compare with JS. Anyway, I hope after some 
+						time it will be normal to read and understand.
+						You have to go into app.js, find this minusClick after finding its function and after 
+						changing it because React has One-Way Data Flow. All data to downward motion. In this structure, parent 
+						data cannot be affected by changes in child elements. 
+						Also in React style you can not use pseudo-classes like :hover, so 2 ways to write them: function or index.css 
+						(I choose the second one and unfortunately have styles for this section in 2 different parts of folder)
+					</p>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Angular</h2>
+					<p>Anugal is based on TypeScript, and you have to know how to write the typisation of data
+						 before starting work on it. For each component you need to create a folder with html,
+						 scss(sass), ts and even testing(which you can delete if you don’t need).
+						  Angular CLI is dynamic for Dom and applications could be rendered outside the browser.
+							 RxJS is a library commonly used with Angular to handle asynchronous data calls.
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						Everythin in Angulare cames to app-root:
+						{{data}}
+						<app-part-component></app-part-component>
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Angular component</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						<main>
+							<h2 id = "unswer">{{writeNum}}</h2>
+							<div class="counter">
+								<button class="plus" (click) = 'plusBtn();'>+</button>
+								<button class="minus" (click) = 'minusBtn();'>-</button>
+							</div>
+						</main>
+					</code></pre>
+					<p>Dependency injection made components more reusable, easier to manage and test,
+						components having their hierarchy. Components from their dependencies can run them parallel to each other. 
+					</p>
+				</section>
+
+				<section>
+					<p>Each component has own style (I choose scss), ts file with class and methods:</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						import { Component, Input, OnInit } from '@angular/core';
+
+						@Component({
+							selector: 'app-main',
+							templateUrl: './main.component.html',
+							styleUrls: ['./main.component.scss']
+						})
+						export class MainComponent implements OnInit {
+							writeNum: number = 0;
+							plusBtn() {
+								this.writeNum++;
+							}
+							minusBtn() {
+								this.writeNum--;
+							}
+						}
+					</code></pre>	
+				</section>
+
+				<section>
+					<h2>My point of view about Angular</h2>
+					<p>
+						<strong style="color: green;">Pluses:</strong><br>
+						This is the framework of classes where you export classes with methods.
+						Classes don’t have dependencies in themselves but consume them from the external source.
+						Then you create a component all dependencies inside it written automatically.
+						Syntaksis is very easy: for data you choose [data], for listeners (click) = 'plusBtn();'  squares.<br>
+						<strong style="color:red;">Minuses:</strong><br>
+						If you onboard new developers familiar with JavaScript to learn and use new Angular,
+						they will be challenged compared to similar React or Vue onboarding. The array of topics and aspects
+						to be covered is large: modules, dependency injection that we mentioned before, components, services,
+						templates, etc. 
+					</p>
+					<p>But if you need a good easy architecture project for a long term you have to do it on Angular.</p>
+				</section>
+
+				
+				<section id="fragments">
+					<h2>Сonclusion</h2>
+					<p>If you have a big project or work in team</p>
+					<p class="fragment">to make it easy for adaptation of the most efficient and accurate development process</p>
+					<p class="fragment">you need use framework!</p>
+					<p class="fragment" style="color: green;">Thank you for attention</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
